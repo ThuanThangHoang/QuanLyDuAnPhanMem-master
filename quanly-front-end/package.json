@@ -1,0 +1,24 @@
+{
+  "name": "quanly-front-end",
+  "version": "0.1.0",
+  "private": true,
+  "dependencies": {
+    "bootstrap": "^4.0.0-beta",
+    "node-sass-chokidar": "^0.0.3",
+    "npm-run-all": "^4.1.1",
+    "react": "^16.0.0",
+    "react-dom": "^16.0.0",
+    "react-md": "^1.2.4",
+    "react-scripts": "1.0.17",
+    "webfontloader": "^1.6.28"
+  },
+  "scripts": {
+    "build-css": "node-sass-chokidar --include-path ./node_modules src/ -o src/",
+    "watch-css": "npm run build-css && npm run build-css --watch --recursive",
+    "start-js": "react-scripts start",
+    "start": "npm-run-all -p watch-css start-js",
+    "build": "react-scripts build",
+    "test": "react-scripts test --env=jsdom",
+    "eject": "react-scripts eject"
+  }
+}
